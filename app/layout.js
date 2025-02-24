@@ -17,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${spaceGrotesk.variable} antialiased font-sans bg-background`}> {/* Use font-sans for Tailwind compatibility */}
+      <body className={`${spaceGrotesk.variable} antialiased font-sans bg-background sm:px-4 md:px-8 lg:px-12`}> {/* Use font-sans for Tailwind compatibility */}
         <Navbar />
         <div>
           {children}

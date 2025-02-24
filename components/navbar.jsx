@@ -13,12 +13,12 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="w-full border-b border-gray-300 bg-background">
+    <nav className="w-full border-b-2 border-black bg-background">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Logo/Name */}
           <div className="text-xl font-bold font-space-grotesk">
-            <Link href="#" className="text-black hover:underline hover:underline-offset-4 transition-all duration-300">
+            <Link href="/" className="text-black hover:underline hover:underline-offset-4 transition-all duration-300">
               Mouniesh
             </Link>
           </div>
@@ -31,7 +31,7 @@ const Navbar = () => {
             <Link href="#" className="text-black hover:underline hover:underline-offset-4 transition-all duration-300">
               Projects
             </Link>
-            <Link href="#" className="text-black hover:underline hover:underline-offset-4 transition-all duration-300">
+            <Link href="/contact" className="text-black hover:underline hover:underline-offset-4 transition-all duration-300">
               Contact
             </Link>
           </div>

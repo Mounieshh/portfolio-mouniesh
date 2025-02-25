@@ -30,20 +30,21 @@ const Footer = () => {
       </div>
 
       {/* Footer Links */}
-      <div className="max-w-7xl w-full px-6 flex flex-col md:flex-row justify-between items-start mt-12 gap-12">
+      <div className="max-w-7xl w-full px-6 flex flex-col md:flex-row justify-around items-start mt-12 gap-12
+      ">
         {/* Social Links */}
-        <div className="space-y-6 text-left text-3xl">
+        <div className="space-y-6 text-left text-2xl">
           <a href="#" className="flex items-center gap-3 hover:underline transition-transform transform hover:translate-x-2">
-            <FaGithub className="text-3xl" /> Github ↗
+            <FaGithub className="text-2xl" /> Github ↗
           </a>
           <a href="#" className="flex items-center gap-3 hover:underline transition-transform transform hover:translate-x-2">
-            <FaTwitter className="text-3xl" /> Twitter ↗
+            <FaTwitter className="text-2xl" /> Twitter ↗
           </a>
           <a href="#" className="flex items-center gap-3 hover:underline transition-transform transform hover:translate-x-2">
-            <FaLinkedin className="text-3xl" /> LinkedIn ↗
+            <FaLinkedin className="text-2xl" /> LinkedIn ↗
           </a>
           <a href="#" className="flex items-center gap-3 hover:underline transition-transform transform hover:translate-x-2">
-            <FaDribbble className="text-3xl" /> Dribbble ↗
+            <FaDribbble className="text-2xl" /> Dribbble ↗
           </a>
         </div>
 

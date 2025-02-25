@@ -5,18 +5,18 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section className="font-space-grotesk max-w-6xl mx-auto px-4 py-12 md:py-14 lg:py-16">
+    <section className="font-space-grotesk max-w-6xl mx-auto px-4 pt-24 py-12 md:pt-28 md:py-14 lg:pt-32 lg:py-16">
       {/* Main Container: Two Halves */}
       <div className="flex flex-col md:flex-row lg:flex-row items-center justify-between gap-8">
-        {/* Left Half: Profile Image (Centered on sm, Centered on md/lg at red X position) */}
-        <div className="w-full md:w-1/2 lg:w-1/2 flex justify-center md:flex md:items-center md:justify-center lg:flex lg:items-center lg:justify-center">
+        {/* Left Half: Profile Image (Centered on sm, Centered on md/lg) */}
+        <div className="w-full md:w-1/2 lg:w-1/2 flex justify-center md:items-center lg:items-center">
           <Link href="/">
             <Image
-              src="/globe.svg"
+              src="/port.jpg"
               alt="Mouniesh's profile"
               width={150}
               height={150}
-              className="hover:opacity-80 transition-opacity md:w-[180px] md:h-[180px] lg:w-[200px] lg:h-[200px] rounded-full object-cover"
+              className="w-[150px] h-[150px] md:w-[200px] md:h-[200px] lg:w-[250px] lg:h-[250px] rounded-full object-cover hover:opacity-80 transition-opacity"
             />
           </Link>
         </div>
@@ -41,15 +41,15 @@ const Hero = () => {
           </p>
 
           {/* Contact and Resume Buttons */}
-          <div className="flex flex-row sm:flex-row gap-4 md:gap-6 lg:gap-8 xl:gap-10 justify-center md:justify-start lg:justify-start">
+          <div className="flex flex-row gap-4 md:gap-6 lg:gap-8 justify-center md:justify-start lg:justify-start">
             <Link href="/contact">
-              <button className="px-6 py-2 bg-black text-white rounded-md hover:bg-gray-300 hover:text-black transition-colors duration-300 text-base sm:text-lg md:text-lg lg:text-lg md:mb-14 lg:mb-16">
+              <button className="px-6 py-2 bg-black text-white rounded-md hover:bg-gray-300 hover:text-black transition-colors duration-300 text-base sm:text-lg md:text-lg lg:text-lg">
                 Contact
               </button>
             </Link>
 
-            <Link href="/resume">
-              <button className="px-6 py-2 bg-black text-white rounded-md hover:bg-gray-300 hover:text-black transition-colors duration-300 text-base sm:text-lg md:text-lg lg:text-lg md:mb-14 lg:mb-16">
+            <Link href="/resume.pdf" target="_blank">
+              <button className="px-6 py-2 bg-black text-white rounded-md hover:bg-gray-300 hover:text-black transition-colors duration-300 text-base sm:text-lg md:text-lg lg:text-lg">
                 Resume
               </button>
             </Link>
@@ -58,9 +58,9 @@ const Hero = () => {
       </div>
 
       {/* Bottom Line: Shaping the Future */}
-      <div className="text-center mt-8">
+      <div className="text-center mt-8 md:pt-10 lg:pt-12">
         <h2 className="text-2xl sm:text-3xl md:text-6xl lg:text-8xl text-gray-800 tracking-tight">
-          Shaping the Future
+          *Shaping the Future*
         </h2>
       </div>
     </section>

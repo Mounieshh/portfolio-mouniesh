@@ -29,6 +29,7 @@ const ProjectPage = () => {
   ];
 
   return (
+    <section id='project' className='pt-9'>
     <div className="min-h-screen py-4 px-4 font-space-grotesk">
       <div className="border-b-2 border-black text-3xl font-semibold pb-3">
         <h2>Featured Works</h2>
@@ -82,6 +83,7 @@ const ProjectPage = () => {
         </div>
       </div>
     </div>
+    </section>
   );
 };
 

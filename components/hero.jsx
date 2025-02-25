@@ -25,7 +25,7 @@ const Hero = () => {
         <div className="w-full md:w-1/2 lg:w-1/2 text-center md:text-left lg:text-left">
           {/* Name */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 text-gray-900">
-            I’m Mouniesh👋
+            I’m Mouniesh
           </h1>
 
           {/* Tagline */}

@@ -94,6 +94,13 @@ const Navbar = () => {
               </svg>
             </button>
             <Link
+              href="/"
+              onClick={toggleMenu}
+              className="text-white text-4xl font-space-grotesk hover:underline hover:underline-offset-4 transition-all duration-300 text-center px-3 py-2"
+            >
+              Home
+            </Link>
+            <Link
               href="#"
               onClick={toggleMenu}
               className="text-white text-4xl font-space-grotesk hover:underline hover:underline-offset-4 transition-all duration-300 text-center px-3 py-2"
@@ -108,7 +115,7 @@ const Navbar = () => {
               Projects
             </Link>
             <Link
-              href="#"
+              href="/contact"
               onClick={toggleMenu}
               className="text-white text-4xl font-space-grotesk hover:underline hover:underline-offset-4 transition-all duration-300 text-center px-3 py-2"
             >

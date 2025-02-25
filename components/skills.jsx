@@ -89,7 +89,7 @@ const SkillCard = memo(({ skill }) => (
 const SkillsPage = () => {
   return (
     <div className="min-h-screen py-6 px-4 font-space-grotesk">
-      <div className="border-b border-black text-3xl font-semibold pb-2 mb-6">
+      <div className="border-b-2 border-black text-3xl font-semibold pb-2 mb-6">
         <h1>Skills</h1>
       </div>
 

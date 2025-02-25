@@ -23,9 +23,6 @@ const ExperiencePage = () => {
           {/* Desktop/Tablets: Left-aligned card with timeline */}
           <div className="hidden md:flex justify-start w-full">
             <div className="bg-white p-6 rounded-lg shadow-md w-5/12 ml-auto relative">
-              <div className="absolute left-[-20px] top-1/2 transform -translate-y-1/2">
-                <FaStar className="text-black" size={20} /> {/* Star icon instead of dot */}
-              </div>
               <h3 className="text-xl font-semibold text-black mb-2">Velam AI</h3>
               <p className="text-black">Web Development Intern</p>
               <p className="text-black mt-2">Jan 2024 - Feb 2024</p>
@@ -44,9 +41,6 @@ const ExperiencePage = () => {
         <div className="mb-8">
           <div className="hidden md:flex justify-end w-full">
             <div className="bg-white p-6 rounded-lg shadow-md w-5/12 mr-auto relative">
-              <div className="absolute right-[-20px] top-1/2 transform -translate-y-1/2">
-                <FaStar className="text-black" size={20} /> {/* Star icon instead of dot */}
-              </div>
               <h3 className="text-xl font-semibold text-black mb-2">The Foundax Company</h3>
               <p className="text-black">Web Development Intern</p>
               <p className="text-black mt-2">Apr 2024 - Sep 2024</p>

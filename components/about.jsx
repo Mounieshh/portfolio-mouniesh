@@ -1,7 +1,10 @@
-"use client";
+"use client"
 
-import Image from "next/image";
-import React from "react";
+import Image from "next/image"
+import React from "react"
+import Link from "next/link"
+
+import { FaGithub, FaHackerrank, FaLinkedin } from "react-icons/fa"
 
 const AboutPage = () => {
   return (
@@ -12,14 +15,45 @@ const AboutPage = () => {
             About
           </h2>
           <div className="flex flex-col md:flex-row items-center gap-8">
-
             <div className="w-full md:w-1/2">
               <p className="text-xl text-black leading-relaxed">
                 Hi, I’m Mouniesh, a web developer pursuing a BE in Computer Science and Engineering. With a strong foundation in web technologies, I specialize in creating engaging, user-friendly digital solutions. I am passionate about leveraging my skills to collaborate on innovative projects that drive technological impact.
               </p>
 
-              <div>
-                About
+              {/* Social Links */}
+              <div className="mt-6 flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="https://leetcode.com/your-username" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-black hover:text-gray-600 underline transition-colors duration-300"
+                >
+                  
+                </Link>
+                <Link
+                  href="https://github.com/your-username" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-black hover:text-gray-600 underline transition-colors duration-300"
+                >
+                  <FaGithub className="text-4xl mr-2"/>
+                </Link>
+                <Link
+                  href="https://www.hackerrank.com/your-username"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-black hover:text-gray-600 underline transition-colors duration-300"
+                >
+                  <FaHackerrank className="text-4xl mr-2"/>
+                </Link>
+                <Link
+                  href="https://www.linkedin.com/in/your-username" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-black hover:text-gray-600 underline transition-colors duration-300"
+                >
+                 <FaLinkedin className="text-4xl mr-2"/>
+                </Link>
               </div>
             </div>
 
@@ -37,7 +71,7 @@ const AboutPage = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default AboutPage;
+export default AboutPage

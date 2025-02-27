@@ -1,15 +1,15 @@
-"use client";
-import { memo } from "react";
-import { motion } from "framer-motion";
+"use client"
+
+import { memo } from "react"
+import { hover, motion } from "framer-motion"
 import {
   FaHtml5,
   FaCss3Alt,
   FaReact,
   FaNodeJs,
   FaGitAlt,
-} from "react-icons/fa";
+} from "react-icons/fa"
 import {
-  SiTailwindcss,
   SiNextdotjs,
   SiRedux,
   SiExpress,
@@ -18,16 +18,23 @@ import {
   SiMongodb,
   SiPostman,
   SiFigma,
-} from "react-icons/si";
-import { DiJavascript } from "react-icons/di";
+} from "react-icons/si"
+import { DiJavascript, DiPython, DiJava } from "react-icons/di"
 
 const techStacks = [
+  {
+    category: "Programming Languages",
+    skills: [
+      { name: "Python", icon: <DiPython /> },
+      { name: "Java", icon: <DiJava /> },
+    ],
+  },
   {
     category: "Frontend",
     skills: [
       { name: "HTML5", icon: <FaHtml5 /> },
       { name: "CSS3", icon: <FaCss3Alt /> },
-      { name: "Tailwind", icon: <SiTailwindcss /> },
+      { name: "JavaScript", icon: <DiJavascript /> },
       { name: "React", icon: <FaReact /> },
       { name: "Next.js", icon: <SiNextdotjs /> },
       { name: "Redux", icon: <SiRedux /> },
@@ -38,16 +45,10 @@ const techStacks = [
     skills: [
       { name: "Node.js", icon: <FaNodeJs /> },
       { name: "Express.js", icon: <SiExpress /> },
-      { name: "APIs", icon: <DiJavascript /> },
+      { name: "MySQL", icon: <SiMongodb /> },
       { name: "JWT", icon: <DiJavascript /> },
       { name: "MongoDB", icon: <SiMongodb /> },
-    ],
-  },
-  {
-    category: "Cloud",
-    skills: [
       { name: "Firebase", icon: <SiFirebase /> },
-      { name: "Vercel", icon: <SiVercel /> },
     ],
   },
   {
@@ -58,62 +59,87 @@ const techStacks = [
       { name: "GitHub", icon: <FaGitAlt /> },
       { name: "Postman", icon: <SiPostman /> },
       { name: "Figma", icon: <SiFigma /> },
+      { name: "Vercel", icon: <SiVercel /> },
     ],
   },
-];
+]
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.1, duration: 0.3 },
-  },
-};
 
 const itemVariants = {
   hidden: { opacity: 0 },
   visible: { opacity: 1, transition: { duration: 0.3 } },
-};
+  hover: { 
+    scale: 1.1,
+    rotate: 5,
+    y: -5, 
+    boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)", 
+    transition: { type: "spring", stiffness: 300, damping: 10 }, 
+  },
+}
 
-// Optimized SkillCard Component
+
 const SkillCard = memo(({ skill }) => (
   <motion.div
     variants={itemVariants}
-    className="bg-white p-2 rounded-md shadow text-center hover:shadow-md transition-shadow duration-200 flex flex-col items-center"
+    initial="hidden"
+    animate="visible"
+    whileHover="hover" 
+    className="bg-white p-3 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow duration-200 flex flex-col items-center cursor-pointer"
   >
-    <div className="text-black text-lg mb-1">{skill.icon}</div>
+    <div className="text-black text-xl mb-2">{skill.icon}</div>
     <h3 className="text-sm font-medium text-black">{skill.name}</h3>
   </motion.div>
-));
+))
 
 const SkillsPage = () => {
   return (
-    <div className="min-h-screen py-6 px-4 font-space-grotesk">
-      <div className="border-b-2 border-black text-3xl font-semibold pb-2 mb-6">
+    <div className="min-h-screen py-12 px-4 font-space-grotesk">
+      <div className="border-b-2 border-black text-3xl font-semibold pb-4 mb-8">
         <h1>Skills</h1>
       </div>
 
-      <div className="max-w-3xl mx-auto">
-        {techStacks.map((section, sectionIndex) => (
-          <div key={`section-${sectionIndex}`} className="mb-8">
-            <h2 className="text-lg font-medium text-black mb-4">
-              {section.category}
-            </h2>
-            <motion.div
-              variants={containerVariants}
-              initial="hidden"
-              animate="visible"
-              className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4"
-            >
-              {section.skills.map((skill, skillIndex) => (
-                <SkillCard key={`skill-${skillIndex}`} skill={skill} />
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+          <div className=" p-6 rounded-lg shadow-lg border border-gray-200">
+            <h2 className="text-xl font-bold text-black mb-4">Programming Languages</h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-4">
+              {techStacks[0].skills.map((skill, index) => (
+                <SkillCard key={index} skill={skill} />
               ))}
-            </motion.div>
+            </div>
           </div>
-        ))}
+
+          <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+            <h2 className="text-xl font-bold text-black mb-4">Frontend</h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-4">
+              {techStacks[1].skills.map((skill, index) => (
+                <SkillCard key={index} skill={skill} />
+              ))}
+            </div>
+          </div>
+
+          <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+            <h2 className="text-xl font-bold text-black mb-4">Backend</h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-4">
+              {techStacks[2].skills.map((skill, index) => (
+                <SkillCard key={index} skill={skill} />
+              ))}
+            </div>
+          </div>
+
+          <div className="p-6 rounded-lg shadow-lg border border-gray-200">
+            <h2 className="text-xl font-bold text-black mb-4">Tools</h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-4">
+              {techStacks[3].skills.map((skill, index) => (
+                <SkillCard key={index} skill={skill} />
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SkillsPage;
+export default SkillsPage

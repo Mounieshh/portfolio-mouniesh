@@ -58,7 +58,7 @@ const Hero = () => {
       </div>
 
       {/* Bottom Line: Shaping the Future */}
-      <div className="text-center mt-8 md:pt-10 lg:pt-12">
+      <div className="text-center mt-5 md:pt-10 lg:pt-12">
         <h2 className="text-2xl sm:text-3xl md:text-6xl lg:text-8xl text-gray-800 tracking-tight">
           *Shaping the Future*
         </h2>

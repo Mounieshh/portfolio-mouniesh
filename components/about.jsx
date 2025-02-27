@@ -3,62 +3,145 @@
 import Image from "next/image"
 import React from "react"
 import Link from "next/link"
-
+import { motion } from "framer-motion"
 import { FaGithub, FaHackerrank, FaLinkedin } from "react-icons/fa"
+import { SiLeetcode } from "react-icons/si"
+import { SiGeeksforgeeks, SiStackoverflow } from "react-icons/si"
 
 const AboutPage = () => {
+  const iconVariants = {
+    initial: { scale: 1, opacity: 1 },
+    hover: { scale: 1.1, y: -10, opacity: 1 },
+    tap: { scale: 1.2, y: -15, opacity: 1, transition: { duration: 0.2 } },
+  }
+
   return (
-    <section id="about" className="pt-5 md:pt-9 lg:pt-10">
-      <div className="min-h-screen py-7 px-4 font-space-grotesk">
+    <section id="about" className="pt-5 md:pt-8 lg:pt-10">
+      <div className="min-h-screen py-3 px-4 font-space-grotesk">
         <div className="max-w-7xl mx-auto">
           <h2 className="border-b-2 border-black text-3xl pb-3 font-bold mb-8">
             About
           </h2>
-          <div className="flex flex-col md:flex-row items-center gap-8">
-            <div className="w-full md:w-1/2">
-              <p className="text-xl text-black leading-relaxed">
+          <div className="flex flex-col md:flex-row items-start gap-8">
+            <div className="w-full md:w-1/2 lg:mt-5">
+              <p className="text-xl text-black leading-relaxed mb-6">
                 Hi, I’m Mouniesh, a web developer pursuing a BE in Computer Science and Engineering. With a strong foundation in web technologies, I specialize in creating engaging, user-friendly digital solutions. I am passionate about leveraging my skills to collaborate on innovative projects that drive technological impact.
               </p>
 
-              {/* Social Links */}
-              <div className="mt-6 flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="https://leetcode.com/your-username" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-black hover:text-gray-600 underline transition-colors duration-300"
-                >
-                  
-                </Link>
-                <Link
-                  href="https://github.com/your-username" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-black hover:text-gray-600 underline transition-colors duration-300"
-                >
-                  <FaGithub className="text-4xl mr-2"/>
-                </Link>
-                <Link
-                  href="https://www.hackerrank.com/your-username"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-black hover:text-gray-600 underline transition-colors duration-300"
-                >
-                  <FaHackerrank className="text-4xl mr-2"/>
-                </Link>
-                <Link
-                  href="https://www.linkedin.com/in/your-username" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-black hover:text-gray-600 underline transition-colors duration-300"
-                >
-                 <FaLinkedin className="text-4xl mr-2"/>
-                </Link>
+              <div className="flex flex-row md:flex-row gap-4 justify-center md:justify-start">
+                <div className="w-full md:w-auto">
+                  <Link
+                    href="https://github.com/Mounieshh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-black transition-colors duration-300 flex items-center justify-center md:justify-start"
+                  >
+                    <motion.div
+                      variants={iconVariants}
+                      initial="initial"
+                      whileHover="hover"
+                      whileTap="tap"
+                      className="flex items-center"
+                    >
+                      <FaGithub className="text-3xl md:text-4xl mr-2" />
+                    </motion.div>
+                  </Link>
+                </div>
+                <div className="w-full md:w-auto">
+                  <Link
+                    href="https://leetcode.com/Mounieshh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-black transition-colors duration-300 flex items-center justify-center md:justify-start"
+                  >
+                    <motion.div
+                      variants={iconVariants}
+                      initial="initial"
+                      whileHover="hover"
+                      whileTap="tap"
+                      className="flex items-center"
+                    >
+                      <SiLeetcode className="text-3xl md:text-4xl mr-2" />
+                    </motion.div>
+                  </Link>
+                </div>
+                <div className="w-full md:w-auto">
+                  <Link
+                    href="https://www.hackerrank.com/Mounieshh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-black transition-colors duration-300 flex items-center justify-center md:justify-start"
+                  >
+                    <motion.div
+                      variants={iconVariants}
+                      initial="initial"
+                      whileHover="hover"
+                      whileTap="tap"
+                      className="flex items-center"
+                    >
+                      <FaHackerrank className="text-3xl md:text-4xl mr-2" />
+                    </motion.div>
+                  </Link>
+                </div>
+                <div className="w-full md:w-auto">
+                  <Link
+                    href="https://www.geeksforgeeks.org/users/Mounieshh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-black transition-colors duration-300 flex items-center justify-center md:justify-start"
+                  >
+                    <motion.div
+                      variants={iconVariants}
+                      initial="initial"
+                      whileHover="hover"
+                      whileTap="tap"
+                      className="flex items-center"
+                    >
+                      <SiGeeksforgeeks className="text-3xl md:text-4xl mr-2" />
+                    </motion.div>
+                  </Link>
+                </div>
+                <div className="w-full md:w-auto">
+                  <Link
+                    href="https://www.linkedin.com/in/Mounieshh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-black transition-colors duration-300 flex items-center justify-center md:justify-start"
+                  >
+                    <motion.div
+                      variants={iconVariants}
+                      initial="initial"
+                      whileHover="hover"
+                      whileTap="tap"
+                      className="flex items-center"
+                    >
+                      <FaLinkedin className="text-3xl md:text-4xl mr-2" />
+                    </motion.div>
+                  </Link>
+                </div>
+                <div className="w-full md:w-auto">
+                  <Link
+                    href="https://stackoverflow.com/users/Mounieshh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-black transition-colors duration-300 flex items-center justify-center md:justify-start"
+                  >
+                    <motion.div
+                      variants={iconVariants}
+                      initial="initial"
+                      whileHover="hover"
+                      whileTap="tap"
+                      className="flex items-center"
+                    >
+                      <SiStackoverflow className="text-3xl md:text-4xl mr-2" />
+                    </motion.div>
+                  </Link>
+                </div>
               </div>
             </div>
 
             <div className="w-full md:w-1/2 md:flex md:justify-end">
-              <div className="relative w-full aspect-[2/3] h-auto overflow-hidden shadow-lg md:h-[80vh] md:w-[30vw]">
+              <div className="relative w-full aspect-[2/3] h-auto overflow-hidden shadow-lg md:h-[70vh] md:w-[30vw]">
                 <Image
                   src="/mouniesh-portfolio.jpg"
                   alt="Mouniesh"

@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { motion } from 'framer-motion'
-import { FaGlobe, FaGithub, FaArrowRight } from 'react-icons/fa' // Added FaArrowRight for hover effect
+import { FaGlobe, FaGithub, FaArrowAltCircleRight} from 'react-icons/fa'
 
 const ProjectPage = () => {
   const projects = [
@@ -17,7 +17,7 @@ const ProjectPage = () => {
       ],
       image: '/project/Spark.jpg',
       hostedLink: 'https://spark-hub-one.vercel.app/',
-      githubLink: 'https://github.com/kathirKarthik001/Spark-hub',
+      githubLink: 'https://github.com/Mounieshh?tab=repositories',
     },
     {
       title: 'BOOK IT',
@@ -28,7 +28,7 @@ const ProjectPage = () => {
       ],
       image: '/project/Book.jpg',
       hostedLink: 'https://book-it-mern-app-mk.vercel.app/',
-      githubLink: 'https://github.com/kathirKarthik001/Book-it',
+      githubLink: 'https://github.com/Mounieshh?tab=repositories',
     },
     {
       title: 'GOALS SETTER APP',
@@ -97,7 +97,7 @@ const ProjectPage = () => {
                       whileHover={{ opacity: 1 }}
                       className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-lg"
                     >
-                      <FaArrowRight className="text-white text-4xl" />
+                      <FaArrowAltCircleRight className="text-white text-4xl" />
                     </motion.div>
                   </div>
                 </Link>

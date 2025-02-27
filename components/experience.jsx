@@ -5,7 +5,7 @@ const ExperiencePage = () => {
     <div className="min-h-screen py-8 px-4 font-space-grotesk">
       {/* Heading */}
       <div className="border-b-2 border-black text-3xl font-semibold pb-3 mb-8">
-        <h1>Experience</h1>
+        <h1>Internships</h1>
       </div>
 
       {/* Description */}

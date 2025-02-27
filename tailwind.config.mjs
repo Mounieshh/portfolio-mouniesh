@@ -8,7 +8,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "#F1EFED",
+        background: "#F1EFED", // #F1EFED
         foreground: "var(--foreground)",
       },
       fontFamily :{

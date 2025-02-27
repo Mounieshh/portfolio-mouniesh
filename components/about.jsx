@@ -16,19 +16,23 @@ const AboutPage = () => {
   }
 
   return (
-    <section id="about" className="pt-5 md:pt-8 lg:pt-10">
-      <div className="min-h-screen py-3 px-4 font-space-grotesk">
+    <section id="about" className="pt-2 md:pt-8 lg:pt-4">
+      <div className="min-h-screen px-4 py-6 font-space-grotesk">
         <div className="max-w-7xl mx-auto">
           <h2 className="border-b-2 border-black text-3xl pb-3 font-bold mb-8">
-            About
+            About Me
           </h2>
-          <div className="flex flex-col md:flex-row items-start gap-8">
-            <div className="w-full md:w-1/2 lg:mt-5">
+          <div className="flex flex-col md:flex-row lg:flex-row items-start gap-8">
+            <div className="w-full sm:mt-12 md:w-1/2 lg:mt-9">
               <p className="text-xl text-black leading-relaxed mb-6">
                 Hi, I’m Mouniesh, a web developer pursuing a BE in Computer Science and Engineering. With a strong foundation in web technologies, I specialize in creating engaging, user-friendly digital solutions. I am passionate about leveraging my skills to collaborate on innovative projects that drive technological impact.
               </p>
 
+              <div className="md:flex md:flex-col lg:flex lg:flex-col mb-7 text-xl font-semibold">
+                Check Out
+              </div>
               <div className="flex flex-row md:flex-row gap-4 justify-center md:justify-start">
+            
                 <div className="w-full md:w-auto">
                   <Link
                     href="https://github.com/Mounieshh"
@@ -139,7 +143,7 @@ const AboutPage = () => {
                 </div>
               </div>
             </div>
-
+            
             <div className="hidden sm:hidden md:w-1/2 md:flex md:justify-end">
               <div className="relative w-full aspect-[2/3] h-auto overflow-hidden shadow-lg md:h-[70vh] md:w-[30vw]">
                 <Image
@@ -147,6 +151,7 @@ const AboutPage = () => {
                   alt="Mouniesh"
                   fill
                   style={{ objectFit: "cover" }}
+                  className="grayscale"
                 />
               </div>
             </div>

@@ -93,6 +93,7 @@ const SkillCard = memo(({ skill }) => (
 
 const SkillsPage = () => {
   return (
+    <section>
     <div className="min-h-screen px-4 font-space-grotesk">
       <div className="border-b-2 border-black text-3xl font-semibold pb-4 mb-8">
         <h1>Skills</h1>
@@ -139,6 +140,7 @@ const SkillsPage = () => {
         </div>
       </div>
     </div>
+    </section>
   )
 }
 

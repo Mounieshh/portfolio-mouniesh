@@ -9,7 +9,7 @@ const Hero = () => {
       {/* Main Container: Two Halves */}
       <div className="flex flex-col md:flex-row lg:flex-row items-center justify-between gap-8">
         {/* Left Half: Profile Image (Centered on sm, Centered on md/lg) */}
-        <div className="w-full md:w-1/2 lg:w-1/2 flex justify-center md:items-center lg:items-center">
+        <div className="w-full md:hidden lg:hidden flex justify-center md:items-center lg:items-center">
           <Link href="/">
             <Image
               src="/port.jpg"

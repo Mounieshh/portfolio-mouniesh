@@ -140,7 +140,7 @@ const AboutPage = () => {
               </div>
             </div>
 
-            <div className="w-full md:w-1/2 md:flex md:justify-end">
+            <div className="hidden sm:hidden md:w-1/2 md:flex md:justify-end">
               <div className="relative w-full aspect-[2/3] h-auto overflow-hidden shadow-lg md:h-[70vh] md:w-[30vw]">
                 <Image
                   src="/project/port.jpg"

@@ -84,7 +84,7 @@ const SkillCard = memo(({ skill }) => (
     initial="hidden"
     animate="visible"
     whileHover="hover" 
-    className="bg-white p-3 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow duration-200 flex flex-col items-center cursor-pointer"
+    className="bg-white p-3 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow duration-200 flex flex-col items-center cursor-pointer"
   >
     <div className="text-black text-xl mb-2">{skill.icon}</div>
     <h3 className="text-sm font-medium text-black">{skill.name}</h3>
@@ -101,7 +101,7 @@ const SkillsPage = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-          <div className=" p-6 rounded-lg shadow-lg border border-gray-200">
+          <div className=" p-6 rounded-lg shadow-2xl border border-gray-200">
             <h2 className="text-xl font-bold text-black mb-4">Programming Languages</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-4">
               {techStacks[0].skills.map((skill, index) => (
@@ -110,7 +110,7 @@ const SkillsPage = () => {
             </div>
           </div>
 
-          <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+          <div className=" p-6 rounded-lg shadow-2xl border border-gray-200">
             <h2 className="text-xl font-bold text-black mb-4">Frontend</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-4">
               {techStacks[1].skills.map((skill, index) => (
@@ -119,7 +119,7 @@ const SkillsPage = () => {
             </div>
           </div>
 
-          <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+          <div className=" p-6 rounded-lg shadow-2xl border border-gray-200">
             <h2 className="text-xl font-bold text-black mb-4">Backend</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-4">
               {techStacks[2].skills.map((skill, index) => (
@@ -128,7 +128,7 @@ const SkillsPage = () => {
             </div>
           </div>
 
-          <div className="p-6 rounded-lg shadow-lg border border-gray-200">
+          <div className="p-6 rounded-lg shadow-2xl border border-gray-200">
             <h2 className="text-xl font-bold text-black mb-4">Tools</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-4">
               {techStacks[3].skills.map((skill, index) => (

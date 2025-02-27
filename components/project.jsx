@@ -52,7 +52,7 @@ const ProjectPage = () => {
 
         <div className="mt-4">
           {projects.map((project, item) => (
-            <div key={item} className="flex flex-col md:flex-row justify-between items-center gap-6 p-4 rounded-lg shadow-md mb-8">
+            <div key={item} className="flex flex-col md:flex-row justify-between items-center gap-6 p-6 rounded-lg shadow-xl mb-8">
               <div className="flex-1 w-full">
                 <h3 className="text-3xl font-semibold text-black mb-6">
                   {project.title}

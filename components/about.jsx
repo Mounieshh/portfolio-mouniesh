@@ -143,7 +143,7 @@ const AboutPage = () => {
             <div className="w-full md:w-1/2 md:flex md:justify-end">
               <div className="relative w-full aspect-[2/3] h-auto overflow-hidden shadow-lg md:h-[70vh] md:w-[30vw]">
                 <Image
-                  src="/mouniesh-portfolio.jpg"
+                  src="/project/port.jpg"
                   alt="Mouniesh"
                   fill
                   style={{ objectFit: "cover" }}

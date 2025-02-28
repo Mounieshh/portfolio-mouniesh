@@ -3,9 +3,28 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
-  
+  const [particles, setParticles] = useState([]);
+
+  useEffect(() => {
+
+    const particleArray = [];
+    for (let i = 0; i < 50; i++) {
+      particleArray.push({
+        id: i,
+        x: Math.random() * 200 - 100,
+        y: Math.random() * 100 - 50,
+        opacity: Math.random(),
+      });
+    }
+    setParticles(particleArray);
+
+    // Clear particles after animation
+    setTimeout(() => setParticles([]), 2000);
+  }, []);
+
   const textVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
@@ -60,14 +79,29 @@ const Hero = () => {
           </motion.div>
         </div>
 
-        <div className="w-full md:w-1/2 lg:w-1/2 text-center md:text-left lg:text-left">
+        <div className="w-full md:w-1/2 lg:w-1/2 text-center md:text-left lg:text-left relative">
           <motion.h1
             variants={textVariants}
             initial="hidden"
             animate="visible"
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 text-gray-900"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 text-gray-900 relative"
           >
             I’m Mouniesh
+            {particles.map((particle) => (
+              <motion.span
+                key={particle.id}
+                initial={{ x: 0, y: 0, opacity: 1 }}
+                animate={{
+                  x: particle.x,
+                  y: particle.y,
+                  opacity: 0,
+                  transition: { duration: 1.5 },
+                }}
+                className="absolute text-gray-400"
+              >
+                •
+              </motion.span>
+            ))}
           </motion.h1>
           <motion.h2
             variants={textVariants}

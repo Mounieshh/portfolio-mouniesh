@@ -14,14 +14,14 @@ const Hero = () => {
               alt="Mouniesh's profile"
               width={300}
               height={300}
-              className="w-full max-w-[300px] rounded-full object-cover hover:opacity-80 transition-opacity"
+              className="w-[350px] h-[340px] rounded-full object-cover hover:opacity-80 transition-opacity"
             />
           </Link>
         </div>
 
         <div className="w-full md:hidden flex justify-center">
           <Image
-            src="/project/port.jpg"
+            src="/project/port-new.jpg"
             alt="Portfolio Image"
             width={260}
             height={260}

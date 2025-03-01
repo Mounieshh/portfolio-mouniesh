@@ -25,7 +25,7 @@ const AboutPage = () => {
           <div className="flex flex-col md:flex-row lg:flex-row items-start gap-8">
             <div className="w-full sm:mt-12 md:w-1/2 lg:mt-9">
               <p className="text-xl text-black leading-relaxed mb-6">
-                Hi, I’m Mouniesh, a web developer pursuing a BE in Computer Science and Engineering. With a strong foundation in web technologies, I specialize in creating engaging, user-friendly digital solutions. I am passionate about leveraging my skills to collaborate on innovative projects that drive technological impact.
+              Hi 👋! I’m Mouniesh, a third-year student pursuing a Bachelor of Engineering (BE) in Computer Science and Engineering, with a deep passion for web development. Equipped with a solid foundation in web technologies, I specialize in crafting engaging and user-friendly digital solutions. I am eager to leverage my skills to collaborate on innovative projects that create a meaningful technological impact.
               </p>
 
               <div className="md:flex md:flex-col lg:flex lg:flex-col mb-7 text-xl font-semibold">

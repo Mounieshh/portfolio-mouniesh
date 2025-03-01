@@ -10,6 +10,7 @@ export default {
       colors: {
         background: "#F1EFED", // #F1EFED
         foreground: "var(--foreground)",
+        sundark: "#D6D3CE",
       },
       fontFamily :{
         'space-grotesk': ['Space Grotesk', 'sans-serif'],

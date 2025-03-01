@@ -17,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${spaceGrotesk.variable} antialiased font-sans`}> 
+      <body className={`${spaceGrotesk.variable} antialiased font-space-grotesk bg-background`}> 
         <Navbar />
         <div>
           {children}

@@ -1,12 +1,17 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { FaGithub, FaTwitter, FaLinkedin, FaDribbble } from "react-icons/fa"
-import { useState, useEffect } from "react" // Import useState and useEffect
+import { FaGithub, FaTwitter, FaLinkedin, FaUsers } from "react-icons/fa"
+import { useState, useEffect } from "react"
+import Link from "next/link"
 
 const Footer = () => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" })
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+      duration: 1000, 
+    })
   }
 
   const marqueeVariants = {
@@ -53,30 +58,30 @@ const Footer = () => {
       <div className="max-w-7xl w-full px-6 flex flex-col md:flex-row justify-around items-start mt-12 gap-12">
         {/* Social Links */}
         <div className="space-y-6 text-left text-2xl">
-          <a href="#" className="flex items-center gap-3 hover:underline transition-transform transform hover:translate-x-2">
+          <Link href="https://github.com/Mounieshh" target="_blank" className="flex items-center gap-3 hover:underline transition-transform transform hover:translate-x-2">
             <FaGithub className="text-2xl" /> Github ↗
-          </a>
-          <a href="#" className="flex items-center gap-3 hover:underline transition-transform transform hover:translate-x-2">
-            <FaTwitter className="text-2xl" /> Twitter ↗
-          </a>
-          <a href="#" className="flex items-center gap-3 hover:underline transition-transform transform hover:translate-x-2">
+          </Link>
+          <Link href="https://www.linkedin.com/in/mouniesh-vijayakumar-2447a2256/" target="_blank" className="flex items-center gap-3 hover:underline transition-transform transform hover:translate-x-2">
             <FaLinkedin className="text-2xl" /> LinkedIn ↗
-          </a>
-          <a href="#" className="flex items-center gap-3 hover:underline transition-transform transform hover:translate-x-2">
-            <FaDribbble className="text-2xl" /> Dev Community ↗
-          </a>
+          </Link>
+          <Link href="https://x.com/Mounieshv" target="_blank" className="flex items-center gap-3 hover:underline transition-transform transform hover:translate-x-2">
+            <FaTwitter className="text-2xl" /> Twitter ↗
+          </Link>
+          <Link href="https://dev.to/mounieshh" target="_blank" className="flex items-center gap-3 hover:underline transition-transform transform hover:translate-x-2">
+            <FaUsers className="text-2xl" /> Dev.to ↗
+          </Link>
         </div>
 
         {/* Contact Text */}
         <div className="flex flex-col sm:text-xl md:text-xl lg:text-2xl leading-snug">
           <p>I’m currently available for new work,</p>
           <p>Let’s talk about the next big thing!</p>
-          <a
+          <Link
             href="mailto:iammounieshv@gmail.com"
             className="font-semibold underline hover:underline transition-opacity hover:opacity-80"
           >
             iammounieshv@gmail.com
-          </a>
+          </Link>
         </div>
       </div>
 

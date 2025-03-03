@@ -1,7 +1,9 @@
 import Link from "next/link";
+import Footer from "@/components/footer";
 
 const ContactPage = () => {
   return (
+    <>
     <div className="min-h-screen bg-background max-w-6xl mx-auto pt-12 md:pt-16 lg:pt-20 py-6 md:py-8 lg:py-10 flex flex-col items-start px-4 sm:px-6 md:px-0">
       <div className="pt-4 md:pt-6 lg:pt-8 mt-6 md:mt-8 lg:mt-10 border-b-2 border-black text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold text-left w-full">
         Contact
@@ -83,6 +85,8 @@ const ContactPage = () => {
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 

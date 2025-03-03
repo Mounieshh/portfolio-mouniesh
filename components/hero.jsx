@@ -3,10 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 
 const Hero = () => {
-
   const textVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
@@ -23,8 +21,8 @@ const Hero = () => {
   };
 
   return (
-    <section className="font-space-grotesk max-w-6xl mx-auto px-4 pt-20 py-10 md:pt-28 md:py-12 lg:pt-32 lg:py-14">
-      <div className="flex flex-col md:flex-row lg:flex-row items-center justify-between gap-8">
+    <section className="relative font-space-grotesk max-w-6xl mx-auto px-4 pt-20 py-10 md:pt-28 md:py-12 lg:pt-32 lg:py-14 before:absolute before:inset-0 before:bg-[linear-gradient(to_right,#00000010_1px,transparent_1px)] before:bg-[size:100px_100%] before:pointer-events-none">
+      <div className="relative flex flex-col md:flex-row lg:flex-row items-center justify-between gap-8">
         <div className="md:flex hidden md:w-1/2 lg:w-1/2 justify-center items-center">
           <Link href="/">
             <motion.div

@@ -63,7 +63,7 @@ const Footer = () => {
             <FaLinkedin className="text-2xl" /> LinkedIn ↗
           </a>
           <a href="#" className="flex items-center gap-3 hover:underline transition-transform transform hover:translate-x-2">
-            <FaDribbble className="text-2xl" /> Dribbble ↗
+            <FaDribbble className="text-2xl" /> Dev Community ↗
           </a>
         </div>
 

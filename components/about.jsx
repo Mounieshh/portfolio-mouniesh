@@ -39,7 +39,7 @@ const AboutPage = () => {
               </p>
 
               <div className="md:flex md:flex-col lg:flex lg:flex-col mb-7 text-xl font-semibold">
-                Check Out
+                Profiles
               </div>
               <div className="flex flex-row md:flex-row gap-4 justify-center md:justify-start">
               <div className="w-full md:w-auto">
@@ -166,7 +166,7 @@ const AboutPage = () => {
                   alt="Mouniesh"
                   fill
                   style={{ objectFit: "cover" }}
-                  className="grayscale"
+                  
                 />
               </motion.div>
             </div>

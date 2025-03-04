@@ -17,7 +17,7 @@ const ProjectPage = () => {
       image: '/project/Spark.jpg',
       hostedLink: 'https://spark-hub-one.vercel.app/',
       githubLink: 'https://github.com/Mounieshh?tab=repositories',
-      tagline: 'Learning Interactive Platform',
+      tagline: 'Learning Platform',
     },
     {
       title: 'BOOK IT',
@@ -69,13 +69,15 @@ const ProjectPage = () => {
                 </ul>
                 <div className="flex space-x-4 mt-4">
                   <Link href={project.hostedLink} className="inline-block" target='_blank'>
-                    <button className="hover:bg-gray-100 transition-colors duration-300 flex items-center">
+                    <button className="hover:bg-slate-400 p-2 transition-colors duration-300 flex items-center">
                       <FaGlobe className="mr-2" size={24} />
+                      <span>Visit Page</span>
                     </button>
                   </Link>
                   <Link href={project.githubLink} className="inline-block" target='_blank'>
-                    <button className="hover:bg-gray-100 transition-colors duration-300 flex items-center">
+                    <button className="hover:bg-slate-400 p-2 transition-colors duration-300 flex items-center">
                       <FaGithub className="mr-2" size={24} />
+                      <span>Github</span>
                     </button>
                   </Link>
                 </div>
@@ -108,7 +110,7 @@ const ProjectPage = () => {
           <div className="mt-6 flex justify-start">
             <Link href="https://github.com/Mounieshh?tab=repositories" target="_blank" rel="noopener noreferrer" className="inline-block">
               <button className="bg-black text-white px-6 py-3 rounded-md hover:bg-gray-500 hover:text-black transition-colors duration-300">
-                View More on Github
+                More Creations
               </button>
             </Link>
           </div>

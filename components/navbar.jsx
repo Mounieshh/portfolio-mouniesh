@@ -23,7 +23,6 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // Mobile menu container variants (slide from right, inspired by reference)
   const menuVariants = {
     closed: { x: "100vw" },
     opened: {
@@ -34,10 +33,9 @@ const Navbar = () => {
         duration: 0.3,
       },
     },
-    exit: { x: "100vw" }, // Added exit for AnimatePresence
+    exit: { x: "100vw" }, 
   };
 
-  // Menu item variants (horizontal stagger from reference)
   const itemVariants = {
     closed: { x: -10, opacity: 0 },
     opened: { x: 0, opacity: 1 },
@@ -57,7 +55,9 @@ const Navbar = () => {
             <button
               onClick={() => scrollToSection("about")}
               className="text-black hover:underline hover:underline-offset-4 transition-all duration-300"
+              
             >
+              
               About
             </button>
             <button

@@ -64,9 +64,9 @@ const Hero = () => {
             variants={textVariants}
             initial="hidden"
             animate="visible"
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 text-gray-900 relative"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-8xl font-bold mb-2 text-gray-900 relative"
           >
-            I’m Mouniesh
+            I"M MOUNIESH
           </motion.h1>
           <motion.h2
             variants={textVariants}

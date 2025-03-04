@@ -1,12 +1,22 @@
-"use client"
+"use client";
 
-import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
-import { motion } from 'framer-motion'
-import { FaGlobe, FaGithub, FaArrowAltCircleRight } from 'react-icons/fa'
+import Image from 'next/image';
+import Link from 'next/link';
+import React, { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { FaGlobe, FaGithub, FaArrowAltCircleRight } from 'react-icons/fa';
 
 const ProjectPage = () => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
+  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 1.03]);
+  const opacity = useTransform(scrollYProgress, [0, 0.2], [0, 1]);
+
+  const sectionVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  };
+
   const projects = [
     {
       title: 'SPARKHUB',
@@ -41,18 +51,38 @@ const ProjectPage = () => {
       githubLink: 'https://github.com/Mounieshh/Goal_Setter_App',
       tagline: 'Task Management Tool',
     },
-  ]
+  ];
 
   return (
     <section id="project" className="pt-9">
-      <div className="min-h-screen py-4 px-4 font-space-grotesk">
-        <div className="border-b-2 border-black text-3xl font-semibold pb-3">
+      <motion.div
+        ref={ref}
+        style={{ scale, opacity }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="min-h-screen py-12 px-4 font-space-grotesk"
+      >
+        <motion.div
+          className="border-b-2 border-black text-3xl font-semibold pb-3"
+          initial="hidden"
+          whileInView="visible"
+          variants={sectionVariants}
+          viewport={{ once: true, amount: 0.3 }}
+        >
           <h2>Featured Projects</h2>
-        </div>
+        </motion.div>
 
         <div className="mt-4">
           {projects.map((project, item) => (
-            <div key={item} className="flex flex-col md:flex-row justify-between items-center gap-6 p-6 rounded-lg shadow-xl mb-8">
+            <motion.div
+              key={item}
+              className="flex flex-col md:flex-row justify-between items-center gap-6 p-6 rounded-lg shadow-xl mb-8"
+              initial="hidden"
+              whileInView="visible"
+              variants={sectionVariants}
+              viewport={{ once: true, amount: 0.3 }}
+            >
               <div className="order-2 md:order-1 flex-1 w-full md:w-1/2">
                 <h3 className="text-3xl font-semibold text-black mb-4">
                   {project.title}
@@ -104,20 +134,26 @@ const ProjectPage = () => {
                   </div>
                 </Link>
               </div>
-            </div>
+            </motion.div>
           ))}
 
-          <div className="mt-6 flex justify-start">
+          <motion.div
+            className="mt-6 flex justify-start"
+            initial="hidden"
+            whileInView="visible"
+            variants={sectionVariants}
+            viewport={{ once: true, amount: 0.3 }}
+          >
             <Link href="https://github.com/Mounieshh?tab=repositories" target="_blank" rel="noopener noreferrer" className="inline-block">
               <button className="bg-black text-white px-6 py-3 rounded-md hover:bg-gray-500 hover:text-black transition-colors duration-300">
                 More Creations
               </button>
             </Link>
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
     </section>
-  )
-}
+  );
+};
 
-export default ProjectPage
+export default ProjectPage;

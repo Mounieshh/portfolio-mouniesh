@@ -5,8 +5,8 @@ import Navbar from "@/components/navbar";
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
   subsets: ["latin"],
-  weights: [400, 700], // Include regular and bold weights
-  display: "swap", // Improves performance by swapping fonts after load
+  weights: [400, 700], 
+  display: "swap", 
 });
 
 export const metadata = {

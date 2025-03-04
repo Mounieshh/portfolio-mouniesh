@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { FaGithub, FaHackerrank, FaLinkedin } from "react-icons/fa";
 import { SiLeetcode, SiGeeksforgeeks, SiStackoverflow } from "react-icons/si";
 
@@ -12,6 +12,15 @@ const AboutPage = () => {
     initial: { scale: 1, opacity: 1 },
     hover: { scale: 1.1, y: -10, opacity: 1 },
     tap: { scale: 1.2, y: -15, opacity: 1, transition: { duration: 0.2 } },
+  };
+
+  const sectionVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
   };
 
   const imageVariants = {
@@ -23,23 +32,62 @@ const AboutPage = () => {
     },
   };
 
+  // Ref for scroll tracking
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+
+  // Transform scroll progress for subtle effects
+  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 1.05]);
+  const opacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
+
   return (
     <section id="about" className="pt-2 md:pt-8 lg:pt-4">
-      <div className="px-4 py-6 font-space-grotesk min-h-[80vh] md:min-h-[90vh]">
+      <motion.div
+        ref={ref}
+        className="px-4 py-6 font-space-grotesk min-h-[80vh] md:min-h-[90vh]"
+        style={{ scale, opacity }}
+      >
         <div className="max-w-7xl mx-auto">
-          <h2 className="border-b-2 border-black text-3xl pb-3 font-bold mb-8">
+          <motion.h2
+            className="border-b-2 border-black text-3xl pb-3 font-bold mb-8"
+            initial="hidden"
+            whileInView="visible"
+            variants={sectionVariants}
+            viewport={{ once: true, amount: 0.3 }}
+          >
             About Me
-          </h2>
+          </motion.h2>
           <div className="flex flex-col md:flex-row lg:flex-row items-start gap-8">
             <div className="w-full sm:mt-12 md:w-1/2 lg:mt-9">
-              <p className="text-lg text-black leading-relaxed mb-4 sm:mb-6 text-justify">
-                Hi👋! I’m Mouniesh, a third-year Computer Science and Engineering student passionate about web development. With a strong foundation in web technologies, I specialize in creating user-friendly digital solutions and am excited to contribute to innovative, impactful projects.
-              </p>
+              <motion.p
+                className="text-lg text-black leading-relaxed mb-4 sm:mb-6 text-justify"
+                initial="hidden"
+                whileInView="visible"
+                variants={sectionVariants}
+                viewport={{ once: true, amount: 0.3 }}
+              >
+                Hi 👋! I’m Mouniesh, a third-year Computer Science and Engineering student passionate about web development. With a strong foundation in web technologies, I specialize in creating user-friendly digital solutions and am excited to contribute to innovative, impactful projects.
+              </motion.p>
 
-              <div className="md:flex md:flex-col lg:flex lg:flex-col mb-4 sm:mb-7 text-xl font-semibold">
+              <motion.div
+                className="md:flex md:flex-col lg:flex lg:flex-col mb-4 sm:mb-7 text-xl font-semibold"
+                initial="hidden"
+                whileInView="visible"
+                variants={sectionVariants}
+                viewport={{ once: true, amount: 0.3 }}
+              >
                 Profiles
-              </div>
-              <div className="flex flex-row md:flex-row gap-4 justify-center md:justify-start pb-4 sm:pb-0">
+              </motion.div>
+              <motion.div
+                className="flex flex-row md:flex-row gap-4 justify-center md:justify-start pb-4 sm:pb-0"
+                initial="hidden"
+                whileInView="visible"
+                variants={sectionVariants}
+                viewport={{ once: true, amount: 0.3 }}
+              >
                 <div className="w-full md:w-auto">
                   <Link
                     href="https://www.linkedin.com/in/mouniesh-vijayakumar-2447a2256/"
@@ -148,15 +196,16 @@ const AboutPage = () => {
                     </motion.div>
                   </Link>
                 </div>
-              </div>
+              </motion.div>
             </div>
 
             <div className="hidden sm:hidden md:w-1/2 md:flex md:justify-end">
               <motion.div
                 className="relative w-full aspect-[2/3] h-auto overflow-hidden shadow-lg md:h-[70vh] md:w-[30vw]"
                 initial="hidden"
-                animate="visible"
+                whileInView="visible"
                 variants={imageVariants}
+                viewport={{ once: true, amount: 0.3 }}
               >
                 <Image
                   src="/project/port.jpg"
@@ -168,7 +217,7 @@ const AboutPage = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

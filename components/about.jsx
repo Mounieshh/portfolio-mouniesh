@@ -44,13 +44,13 @@ const AboutPage = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
 
   return (
-    <section id="about" className="pt-2 md:pt-8 lg:pt-4">
+    <section id="about" className="pt-2 md:pt-8 lg:pt-4 max-w-6xl mx-auto px-4">
       <motion.div
         ref={ref}
         className="px-4 py-6 font-space-grotesk min-h-[80vh] md:min-h-[90vh]"
         style={{ scale, opacity }}
       >
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl sm:max-w-4xl mx-auto">
           <motion.h2
             className="border-b-2 border-black text-3xl pb-3 font-bold mb-8"
             initial="hidden"

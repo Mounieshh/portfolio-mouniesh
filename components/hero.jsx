@@ -34,8 +34,8 @@ const Hero = () => {
               <Image
                 src="/svg/absurd.png"
                 alt="Mouniesh's profile"
-                width={300}
-                height={300}
+                width={350}
+                height={350}
                 className="w-full h-full rounded-full object-cover hover:opacity-80 transition-opacity"
               />
             </motion.div>
@@ -64,9 +64,11 @@ const Hero = () => {
             variants={textVariants}
             initial="hidden"
             animate="visible"
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-8xl font-bold mb-2 text-gray-900 relative"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 text-gray-900 relative"
           >
-            I"M MOUNIESH
+            I"M 
+            <br />
+            MOUNIESH
           </motion.h1>
           <motion.h2
             variants={textVariants}
@@ -74,7 +76,7 @@ const Hero = () => {
             animate="visible"
             className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-600 mb-4"
           >
-            AKA Developer
+            Student and Developer
           </motion.h2>
           <motion.p
             variants={textVariants}

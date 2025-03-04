@@ -82,14 +82,14 @@ const SkillsPage = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
 
   return (
-    <section>
+    <section >
       <motion.div
         ref={ref}
         style={{ scale, opacity }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="min-h-screen px-4 font-space-grotesk py-0"
+        className="min-h-screen px-4 font-space-grotesk py-2"
       >
         <div className="max-w-7xl mx-auto">
           <motion.div

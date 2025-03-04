@@ -15,6 +15,7 @@ const ExperiencePage = () => {
   };
 
   return (
+    <section className=''>
     <motion.div
       ref={ref}
       style={{ scale, opacity }}
@@ -115,6 +116,7 @@ const ExperiencePage = () => {
         </motion.div>
       </div>
     </motion.div>
+    </section>
   );
 };
 

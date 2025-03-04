@@ -54,7 +54,7 @@ const ProjectPage = () => {
   ];
 
   return (
-    <section id="project" className="pt-9">
+    <section id="project" className="pt-9 sm:max-w-6xl sm:mx-auto sm:px-4">
       <motion.div
         ref={ref}
         style={{ scale, opacity }}

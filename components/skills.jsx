@@ -82,14 +82,14 @@ const SkillsPage = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
 
   return (
-    <section className="max-w-6xl mx-auto px-4 overflow-hidden">
+    <section className="max-w-6xl mx-auto px-4 pb-20">
       <motion.div
         ref={ref}
         style={{ scale, opacity }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="min-h-screen px-4 font-space-grotesk py-2 w-full"
+        className="h-auto px-4 font-space-grotesk py-10 w-full"
       >
         <div className="max-w-6xl mx-auto">
           <motion.div
@@ -103,65 +103,23 @@ const SkillsPage = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
-            <motion.div
-              className="p-6 rounded-lg shadow-2xl border border-gray-200"
-              initial="hidden"
-              whileInView="visible"
-              variants={itemVariants}
-              viewport={{ once: true, amount: 0.3 }}
-            >
-              <h2 className="text-xl font-bold text-black mb-4">Programming Languages</h2>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                {techStacks[0].skills.map((skill, index) => (
-                  <SkillCard key={index} skill={skill} />
-                ))}
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="p-6 rounded-lg shadow-2xl border border-gray-200"
-              initial="hidden"
-              whileInView="visible"
-              variants={itemVariants}
-              viewport={{ once: true, amount: 0.3 }}
-            >
-              <h2 className="text-xl font-bold text-black mb-4">Frontend</h2>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                {techStacks[1].skills.map((skill, index) => (
-                  <SkillCard key={index} skill={skill} />
-                ))}
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="p-6 rounded-lg shadow-2xl border border-gray-200"
-              initial="hidden"
-              whileInView="visible"
-              variants={itemVariants}
-              viewport={{ once: true, amount: 0.3 }}
-            >
-              <h2 className="text-xl font-bold text-black mb-4">Backend</h2>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                {techStacks[2].skills.map((skill, index) => (
-                  <SkillCard key={index} skill={skill} />
-                ))}
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="p-6 rounded-lg shadow-2xl border border-gray-200"
-              initial="hidden"
-              whileInView="visible"
-              variants={itemVariants}
-              viewport={{ once: true, amount: 0.3 }}
-            >
-              <h2 className="text-xl font-bold text-black mb-4">Tools</h2>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                {techStacks[3].skills.map((skill, index) => (
-                  <SkillCard key={index} skill={skill} />
-                ))}
-              </div>
-            </motion.div>
+            {techStacks.map((stack, i) => (
+              <motion.div
+                key={i}
+                className="p-6 rounded-lg shadow-2xl border border-gray-200"
+                initial="hidden"
+                whileInView="visible"
+                variants={itemVariants}
+                viewport={{ once: true, amount: 0.3 }}
+              >
+                <h2 className="text-xl font-bold text-black mb-4">{stack.category}</h2>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                  {stack.skills.map((skill, index) => (
+                    <SkillCard key={index} skill={skill} />
+                  ))}
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </motion.div>

@@ -54,7 +54,7 @@ const ProjectPage = () => {
   ];
 
   return (
-    <section id="project" className="pt-9 max-w-6xl mx-auto px-4 overflow-hidden">
+    <section id="project" className="pt-4 max-w-6xl mx-auto px-4 overflow-hidden">
       <motion.div
         ref={ref}
         style={{ scale, opacity }}
@@ -64,7 +64,7 @@ const ProjectPage = () => {
         className="min-h-screen py-12 px-4 font-space-grotesk w-full"
       >
         <motion.div
-          className="border-b-2 border-black text-3xl font-semibold pb-3"
+          className="border-b-2 border-black text-3xl font-semibold pb-4"
           initial="hidden"
           whileInView="visible"
           variants={sectionVariants}
@@ -74,37 +74,31 @@ const ProjectPage = () => {
         </motion.div>
 
         <div className="mt-4 w-full">
-          {projects.map((project, item) => (
+          {projects.map((project, index) => (
             <motion.div
-              key={item}
-              className="flex flex-col md:flex-row justify-between items-center gap-6 p-6 rounded-lg shadow-xl mb-8 w-full"
+              key={index}
+              className={`flex flex-col md:flex-row ${index % 2 === 0 ? 'md:flex-row-reverse' : ''} justify-between items-center gap-6 p-6 rounded-lg shadow-xl mb-8 w-full`}
               initial="hidden"
               whileInView="visible"
               variants={sectionVariants}
               viewport={{ once: true, amount: 0.3 }}
             >
-              <div className="order-2 md:order-1 flex-1 w-full md:w-1/2">
-                <h3 className="text-3xl font-semibold text-black mb-4">
-                  {project.title}
-                </h3>
-                <p className="text-lg text-black leading-relaxed mb-2">
-                  {project.tagline}
-                </p>
+              <div className="flex-1 w-full md:w-1/2">
+                <h3 className="text-3xl font-semibold text-black mb-4">{project.title}</h3>
+                <p className="text-lg text-black leading-relaxed mb-2">{project.tagline}</p>
                 <ul className="list-disc pl-5 space-y-2 text-black">
-                  {project.description.map((point, index) => (
-                    <li key={index} className="text-base leading-relaxed">
-                      {point}
-                    </li>
+                  {project.description.map((point, i) => (
+                    <li key={i} className="text-base leading-relaxed">{point}</li>
                   ))}
                 </ul>
                 <div className="flex flex-wrap space-x-4 mt-4">
-                  <Link href={project.hostedLink} className="inline-block" target='_blank'>
+                  <Link href={project.hostedLink} target='_blank'>
                     <button className="hover:bg-slate-400 p-2 transition-colors duration-300 flex items-center">
                       <FaGlobe className="mr-2" size={24} />
                       <span>Visit Page</span>
                     </button>
                   </Link>
-                  <Link href={project.githubLink} className="inline-block" target='_blank'>
+                  <Link href={project.githubLink} target='_blank'>
                     <button className="hover:bg-slate-400 p-2 transition-colors duration-300 flex items-center">
                       <FaGithub className="mr-2" size={24} />
                       <span>Github</span>
@@ -112,16 +106,19 @@ const ProjectPage = () => {
                   </Link>
                 </div>
               </div>
-
-              <div className="order-1 md:order-2 flex-1 flex justify-center items-center w-full md:w-1/2">
+              <div className="flex-1 flex justify-center items-center w-full md:w-1/2">
                 <Link href={project.hostedLink} target="_blank" className="w-full max-w-[500px]">
-                  <div className="relative flex items-center justify-center overflow-hidden shadow-lg rounded-lg p-4 border border-gray-300"> 
+                  <motion.div
+                    className="relative flex items-center justify-center overflow-hidden shadow-lg rounded-lg p-4 border border-gray-300 h-64"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.3 }}
+                  > 
                     <Image
                       src={project.image}
                       alt={`${project.title} image`}
                       width={500}
                       height={300}
-                      className="rounded-lg object-cover transition-opacity duration-300 w-full h-auto"
+                      className="rounded-lg object-cover transition-opacity duration-300 md:w-full w-72 h-64"
                     />
                     <motion.div
                       initial={{ opacity: 0 }}
@@ -130,25 +127,11 @@ const ProjectPage = () => {
                     >
                       <FaArrowAltCircleRight className="text-white text-4xl" />
                     </motion.div>
-                  </div>
+                  </motion.div>
                 </Link>
               </div>
             </motion.div>
           ))}
-
-          <motion.div
-            className="mt-6 flex justify-start"
-            initial="hidden"
-            whileInView="visible"
-            variants={sectionVariants}
-            viewport={{ once: true, amount: 0.3 }}
-          >
-            <Link href="https://github.com/Mounieshh?tab=repositories" target="_blank" rel="noopener noreferrer" className="inline-block">
-              <button className="bg-black text-white px-6 py-3 rounded-md hover:bg-gray-500 hover:text-black transition-colors duration-300">
-                More Creations
-              </button>
-            </Link>
-          </motion.div>
         </div>
       </motion.div>
     </section>

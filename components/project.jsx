@@ -54,14 +54,14 @@ const ProjectPage = () => {
   ];
 
   return (
-    <section id="project" className="pt-9 sm:max-w-6xl sm:mx-auto sm:px-4">
+    <section id="project" className="pt-9 max-w-6xl mx-auto px-4 overflow-hidden">
       <motion.div
         ref={ref}
         style={{ scale, opacity }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="min-h-screen py-12 px-4 font-space-grotesk"
+        className="min-h-screen py-12 px-4 font-space-grotesk w-full"
       >
         <motion.div
           className="border-b-2 border-black text-3xl font-semibold pb-3"
@@ -73,11 +73,11 @@ const ProjectPage = () => {
           <h2>Featured Projects</h2>
         </motion.div>
 
-        <div className="mt-4">
+        <div className="mt-4 w-full">
           {projects.map((project, item) => (
             <motion.div
               key={item}
-              className="flex flex-col md:flex-row justify-between items-center gap-6 p-6 rounded-lg shadow-xl mb-8"
+              className="flex flex-col md:flex-row justify-between items-center gap-6 p-6 rounded-lg shadow-xl mb-8 w-full"
               initial="hidden"
               whileInView="visible"
               variants={sectionVariants}
@@ -97,7 +97,7 @@ const ProjectPage = () => {
                     </li>
                   ))}
                 </ul>
-                <div className="flex space-x-4 mt-4">
+                <div className="flex flex-wrap space-x-4 mt-4">
                   <Link href={project.hostedLink} className="inline-block" target='_blank'>
                     <button className="hover:bg-slate-400 p-2 transition-colors duration-300 flex items-center">
                       <FaGlobe className="mr-2" size={24} />
@@ -114,16 +114,15 @@ const ProjectPage = () => {
               </div>
 
               <div className="order-1 md:order-2 flex-1 flex justify-center items-center w-full md:w-1/2">
-                <Link href={project.hostedLink} target="_blank" className="relative w-full">
+                <Link href={project.hostedLink} target="_blank" className="w-full max-w-[500px]">
                   <div className="relative flex items-center justify-center overflow-hidden shadow-lg rounded-lg p-4 border border-gray-300"> 
                     <Image
                       src={project.image}
                       alt={`${project.title} image`}
                       width={500}
                       height={300}
-                      className="rounded-lg object-cover transition-opacity duration-300"
+                      className="rounded-lg object-cover transition-opacity duration-300 w-full h-auto"
                     />
-
                     <motion.div
                       initial={{ opacity: 0 }}
                       whileHover={{ opacity: 1 }}

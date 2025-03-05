@@ -32,25 +32,23 @@ const AboutPage = () => {
     },
   };
 
-  // Ref for scroll tracking
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"],
   });
 
-  // Transform scroll progress for subtle effects
   const scale = useTransform(scrollYProgress, [0, 0.5], [1, 1.05]);
   const opacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
 
   return (
-    <section id="about" className="pt-2 md:pt-8 lg:pt-4 max-w-6xl mx-auto px-4">
+    <section id="about" className="pt-2 md:pt-8 lg:pt-4 max-w-6xl mx-auto px-4 overflow-hidden">
       <motion.div
         ref={ref}
-        className="px-4 py-6 font-space-grotesk min-h-[80vh] md:min-h-[90vh]"
+        className="px-4 py-6 font-space-grotesk min-h-[80vh] md:min-h-[90vh] w-full"
         style={{ scale, opacity }}
       >
-        <div className="max-w-7xl sm:max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <motion.h2
             className="border-b-2 border-black text-3xl pb-3 font-bold mb-8"
             initial="hidden"
@@ -60,8 +58,8 @@ const AboutPage = () => {
           >
             About Me
           </motion.h2>
-          <div className="flex flex-col md:flex-row lg:flex-row items-start gap-8">
-            <div className="w-full sm:mt-12 md:w-1/2 lg:mt-9">
+          <div className="flex flex-col md:flex-row lg:flex-row items-start gap-8 w-full">
+            <div className="w-full md:w-1/2 lg:mt-9">
               <motion.p
                 className="text-lg text-black leading-relaxed mb-4 sm:mb-6 text-justify"
                 initial="hidden"
@@ -82,18 +80,18 @@ const AboutPage = () => {
                 Profiles
               </motion.div>
               <motion.div
-                className="flex flex-row md:flex-row gap-4 justify-center md:justify-start pb-4 sm:pb-0"
+                className="flex flex-row flex-wrap gap-4 justify-center md:justify-start pb-4 sm:pb-0"
                 initial="hidden"
                 whileInView="visible"
                 variants={sectionVariants}
                 viewport={{ once: true, amount: 0.3 }}
               >
-                <div className="w-full md:w-auto">
+                <div className="w-auto">
                   <Link
                     href="https://www.linkedin.com/in/mouniesh-vijayakumar-2447a2256/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-black transition-colors duration-300 flex items-center justify-center md:justify-start"
+                    className="text-black transition-colors duration-300 flex items-center justify-center"
                   >
                     <motion.div
                       variants={iconVariants}
@@ -106,12 +104,12 @@ const AboutPage = () => {
                     </motion.div>
                   </Link>
                 </div>
-                <div className="w-full md:w-auto">
+                <div className="w-auto">
                   <Link
                     href="https://github.com/Mounieshh"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-black transition-colors duration-300 flex items-center justify-center md:justify-start"
+                    className="text-black transition-colors duration-300 flex items-center justify-center"
                   >
                     <motion.div
                       variants={iconVariants}
@@ -124,12 +122,12 @@ const AboutPage = () => {
                     </motion.div>
                   </Link>
                 </div>
-                <div className="w-full md:w-auto">
+                <div className="w-auto">
                   <Link
                     href="https://leetcode.com/u/Mounieshh/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-black transition-colors duration-300 flex items-center justify-center md:justify-start"
+                    className="text-black transition-colors duration-300 flex items-center justify-center"
                   >
                     <motion.div
                       variants={iconVariants}
@@ -142,12 +140,12 @@ const AboutPage = () => {
                     </motion.div>
                   </Link>
                 </div>
-                <div className="w-full md:w-auto">
+                <div className="w-auto">
                   <Link
                     href="https://www.hackerrank.com/profile/iammounieshv"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-black transition-colors duration-300 flex items-center justify-center md:justify-start"
+                    className="text-black transition-colors duration-300 flex items-center justify-center"
                   >
                     <motion.div
                       variants={iconVariants}
@@ -160,12 +158,12 @@ const AboutPage = () => {
                     </motion.div>
                   </Link>
                 </div>
-                <div className="w-full md:w-auto">
+                <div className="w-auto">
                   <Link
                     href="https://www.geeksforgeeks.org/user/iammounenvb/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-black transition-colors duration-300 flex items-center justify-center md:justify-start"
+                    className="text-black transition-colors duration-300 flex items-center justify-center"
                   >
                     <motion.div
                       variants={iconVariants}
@@ -178,12 +176,12 @@ const AboutPage = () => {
                     </motion.div>
                   </Link>
                 </div>
-                <div className="w-full md:w-auto">
+                <div className="w-auto">
                   <Link
                     href="https://stackoverflow.com/users/24472241/mouniesh"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-black transition-colors duration-300 flex items-center justify-center md:justify-start"
+                    className="text-black transition-colors duration-300 flex items-center justify-center"
                   >
                     <motion.div
                       variants={iconVariants}
@@ -199,9 +197,9 @@ const AboutPage = () => {
               </motion.div>
             </div>
 
-            <div className="hidden sm:hidden md:w-1/2 md:flex md:justify-end">
+            <div className="hidden md:w-1/2 md:flex md:justify-end">
               <motion.div
-                className="relative w-full aspect-[2/3] h-auto overflow-hidden shadow-lg md:h-[70vh] md:w-[30vw]"
+                className="relative w-full max-w-[30vw] aspect-[2/3] h-auto overflow-hidden shadow-lg md:h-[70vh]"
                 initial="hidden"
                 whileInView="visible"
                 variants={imageVariants}

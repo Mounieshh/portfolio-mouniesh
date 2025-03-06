@@ -15,7 +15,7 @@ const ExperiencePage = () => {
   };
 
   return (
-    <section className="max-w-6xl mx-auto px-4 overflow-hidden">
+    <section id='internships' className="max-w-6xl mx-auto px-4 overflow-hidden">
       <motion.div
         ref={ref}
         style={{ scale, opacity }}

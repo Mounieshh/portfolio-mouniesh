@@ -33,7 +33,7 @@ const Navbar = () => {
         duration: 0.3,
       },
     },
-    exit: { x: "100vw" }, 
+    exit: { x: "100vw" },
   };
 
   const itemVariants = {
@@ -55,9 +55,7 @@ const Navbar = () => {
             <button
               onClick={() => scrollToSection("about")}
               className="text-black hover:underline hover:underline-offset-4 transition-all duration-300"
-              
             >
-              
               About
             </button>
             <button
@@ -66,13 +64,25 @@ const Navbar = () => {
             >
               Projects
             </button>
-            <Link href="/contact" className="text-black hover:underline hover:underline-offset-4 transition-all duration-300">
-              Contact
-            </Link>
+            <button
+              onClick={() => scrollToSection("skills")}
+              className="text-black hover:underline hover:underline-offset-4 transition-all duration-300"
+            >
+              Skills
+            </button>
+            <button
+              onClick={() => scrollToSection("internships")}
+              className="text-black hover:underline hover:underline-offset-4 transition-all duration-300"
+            >
+              Experience
+            </button>
+            
           </div>
 
           <div className="text-black hover:underline hover:underline-offset-4 transition-all duration-300 font-space-grotesk font-semibold">
-            <Link href="/resume.pdf" target="_blank">Resume</Link>
+          <Link href="/contact" className="text-black hover:underline hover:underline-offset-4 transition-all duration-300">
+              Contact
+            </Link>
           </div>
 
           <div className="md:hidden">
@@ -145,6 +155,30 @@ const Navbar = () => {
                 </motion.div>
 
                 <motion.div variants={itemVariants}>
+                  <button
+                    onClick={() => {
+                      toggleMenu();
+                      scrollToSection("skills");
+                    }}
+                    className="text-white text-4xl font-space-grotesk hover:underline hover:underline-offset-4 transition-all duration-300 text-center px-3 py-2"
+                  >
+                    Skills
+                  </button>
+                </motion.div>
+
+                <motion.div variants={itemVariants}>
+                  <button
+                    onClick={() => {
+                      toggleMenu();
+                      scrollToSection("experience");
+                    }}
+                    className="text-white text-4xl font-space-grotesk hover:underline hover:underline-offset-4 transition-all duration-300 text-center px-3 py-2"
+                  >
+                    Experience
+                  </button>
+                </motion.div>
+
+                <motion.div variants={itemVariants}>
                   <Link
                     href="/contact"
                     onClick={toggleMenu}
@@ -153,6 +187,7 @@ const Navbar = () => {
                     Contact
                   </Link>
                 </motion.div>
+
               </motion.div>
             </motion.div>
           )}

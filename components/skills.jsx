@@ -82,7 +82,7 @@ const SkillsPage = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
 
   return (
-    <section className="max-w-6xl mx-auto px-4 pb-20">
+    <section id="skills" className="max-w-6xl mx-auto px-4 pb-20">
       <motion.div
         ref={ref}
         style={{ scale, opacity }}

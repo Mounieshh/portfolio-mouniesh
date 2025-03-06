@@ -22,7 +22,9 @@ const ContactPage = () => {
         </div>
         <div className="bg-sundark mt-10 md:mt-12 lg:mt-16 w-full max-w-md md:max-w-lg lg:max-w-3xl md:ml-auto">
           <div className="p-4 sm:p-6 md:p-8 lg:p-10 rounded-lg shadow-xl">
-            <form action="" className="space-y-4">
+            <form action="https://formsubmit.co/1317e718d41d16455b9eb4d2fe20d55d" method="POST" className="space-y-4">
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_honey" className="hidden" />
               <div className="mb-2 sm:mb-3 md:mb-4">
                 <label htmlFor="name" className="block text-sm sm:text-base md:text-lg lg:text-xl font-medium mb-1 sm:mb-2">
                   Name
@@ -30,7 +32,8 @@ const ContactPage = () => {
                 <input
                   type="text"
                   id="name"
-                  placeholder="ex. John Smith"
+                  name="name"
+                  placeholder="Enter your name"
                   className="w-full p-2 sm:p-3 md:p-4 lg:p-5 border border-gray-300 rounded-md text-gray-500 focus:outline-none focus:ring-2 focus:ring-black"
                 />
               </div>
@@ -42,6 +45,7 @@ const ContactPage = () => {
                   <input
                     type="email"
                     id="email"
+                    name="email"
                     placeholder="hello@website.com"
                     className="w-full p-2 sm:p-3 md:p-4 lg:p-5 border border-gray-300 rounded-md text-gray-500 focus:outline-none focus:ring-2 focus:ring-black"
                   />
@@ -53,11 +57,11 @@ const ContactPage = () => {
                 </label>
                 <div className="space-y-2">
                   <label className="flex items-center">
-                    <input type="checkbox" className="mr-2 focus:ring-black" />
+                    <input type="checkbox" name="Multi Page" className="mr-2 focus:ring-black" />
                     <span className="text-sm sm:text-base md:text-lg lg:text-xl">Multipage Website Design</span>
                   </label>
                   <label className="flex items-center">
-                    <input type="checkbox" className="mr-2 focus:ring-black" />
+                    <input type="checkbox" name="Single Static Site" className="mr-2 focus:ring-black" />
                     <span className="text-sm sm:text-base md:text-lg lg:text-xl">Landing Page Design</span>
                   </label>
                 </div>
@@ -68,6 +72,7 @@ const ContactPage = () => {
                   Share More Details
                 </label>
                 <textarea
+                  name="text"
                   placeholder="Describe what you need..."
                   className="w-full p-2 sm:p-3 md:p-4 lg:p-5 border border-gray-300 rounded-md text-gray-500 focus:outline-none focus:ring-2 focus:ring-black h-16 sm:h-20 md:h-24 lg:h-32"
                 ></textarea>

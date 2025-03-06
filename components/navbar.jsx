@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const Navbar = () => {
   const scrollToSection = (id) => {
@@ -47,7 +48,14 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           <div className="text-xl font-bold font-space-grotesk">
             <Link href="/" className="text-black hover:underline hover:underline-offset-4 transition-all duration-300">
-              Mouniesh
+              <Image
+              src="/logo.svg"
+              alt="Logo Image"
+              height={53}
+              width={53}
+              priority="1"
+              className="object-contain"
+              />
             </Link>
           </div>
 

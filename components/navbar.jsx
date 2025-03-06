@@ -178,7 +178,7 @@ const Navbar = () => {
                   <button
                     onClick={() => {
                       toggleMenu();
-                      scrollToSection("experience");
+                      scrollToSection("internships");
                     }}
                     className="text-white text-4xl font-space-grotesk hover:underline hover:underline-offset-4 transition-all duration-300 text-center px-3 py-2"
                   >

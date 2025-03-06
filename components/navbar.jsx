@@ -53,8 +53,8 @@ const Navbar = () => {
               alt="Logo Image"
               height={53}
               width={53}
-              priority="1"
-              className="object-contain"
+
+              className="object-cover"
               />
             </Link>
           </div>

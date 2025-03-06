@@ -55,7 +55,7 @@ const Hero = () => {
       }
 
       draw() {
-        ctx.fillStyle = `rgba(147, 51, 234, ${this.opacity})`;
+        ctx.fillStyle = `rgba(121,134,156 ${this.opacity})`;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();

@@ -45,7 +45,7 @@ const AboutPage = () => {
     <section id="about" className="pt-2 md:pt-8 lg:pt-4 max-w-6xl mx-auto px-4 overflow-hidden">
       <motion.div
         ref={ref}
-        className="px-4 py-6 font-space-grotesk min-h-[80vh] md:min-h-[90vh] w-full"
+        className="px-4 py-6 font-space-grotesk min-h-[70vh] md:min-h-[90vh] w-full"
         style={{ scale, opacity }}
       >
         <div className="max-w-6xl mx-auto">

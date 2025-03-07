@@ -62,7 +62,7 @@ const ExperiencePage = () => {
                 variants={sectionVariants}
                 viewport={{ once: true, amount: 0.3 }}
               >
-                <h3 className="text-xl font-semibold text-black mb-2">Velam AI</h3>
+                <h3 className="text-xl font-semibold text-black mb-2">Vantage Flow</h3>
                 <p className="text-black">Web Development Intern</p>
                 <p className="text-black mt-2">Jan 2024 - Feb 2024</p>
               </motion.div>
@@ -75,7 +75,7 @@ const ExperiencePage = () => {
               variants={sectionVariants}
               viewport={{ once: true, amount: 0.3 }}
             >
-              <h3 className="text-xl font-semibold text-black mb-2">Velam AI</h3>
+              <h3 className="text-xl font-semibold text-black mb-2">Vantage Flow</h3>
               <p className="text-black">Web Development Intern</p>
               <p className="text-black mt-2">Jan 2024 - Feb 2024</p>
             </motion.div>

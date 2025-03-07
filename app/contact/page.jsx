@@ -51,25 +51,10 @@ const ContactPage = () => {
                   />
                 </div>
               </div>
-              <div className="mb-2 sm:mb-3 md:mb-4">
-                <label className="block text-sm sm:text-base md:text-lg lg:text-xl font-medium mb-1 sm:mb-2">
-                  What's Your Project About?
-                </label>
-                <div className="space-y-2">
-                  <label className="flex items-center">
-                    <input type="checkbox" name="Multi Page" className="mr-2 focus:ring-black" />
-                    <span className="text-sm sm:text-base md:text-lg lg:text-xl">Multipage Website Design</span>
-                  </label>
-                  <label className="flex items-center">
-                    <input type="checkbox" name="Single Static Site" className="mr-2 focus:ring-black" />
-                    <span className="text-sm sm:text-base md:text-lg lg:text-xl">Landing Page Design</span>
-                  </label>
-                </div>
-              </div>
               
               <div className="mb-2 sm:mb-3 md:mb-4">
                 <label className="block text-sm sm:text-base md:text-lg lg:text-xl font-medium mb-1 sm:mb-2">
-                  Share More Details
+                  Message Here
                 </label>
                 <textarea
                   name="text"

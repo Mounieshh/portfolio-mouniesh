@@ -51,6 +51,17 @@ const ProjectPage = () => {
       githubLink: 'https://github.com/Mounieshh/Goal_Setter_App',
       tagline: 'Task Management Tool',
     },
+    {
+      title: 'PROMPTOPIA',
+      description: [
+        ' Created an AI prompt-sharing platform allowing users to create, edit, and manage prompts seamlessly.',
+        'Features smooth animations and responsive design.',
+      ],
+      image: '/project/promptopia.png',
+      hostedLink: 'https://github.com/Mounieshh/promptopia_nextjs',
+      githubLink: 'https://github.com/Mounieshh/promptopia_nextjs',
+      tagline: 'User AI Prompt Sharing Tool',
+    },
   ];
 
   return (
@@ -132,6 +143,21 @@ const ProjectPage = () => {
               </div>
             </motion.div>
           ))}
+          {/* View More Creations Button */}
+          <motion.div
+            className="flex justify-center mt-8"
+            initial="hidden"
+            whileInView="visible"
+            variants={sectionVariants}
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            <Link href="https://github.com/Mounieshh?tab=repositories" target="_blank">
+              <button className="hover:bg-slate-400 p-3 transition-colors duration-300 flex items-center text-lg font-semibold border border-black rounded-lg">
+                <FaGithub className="mr-2" size={24} />
+                <span>View More Creations</span>
+              </button>
+            </Link>
+          </motion.div>
         </div>
       </motion.div>
     </section>

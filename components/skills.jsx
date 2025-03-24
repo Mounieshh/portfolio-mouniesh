@@ -3,7 +3,7 @@
 import { memo } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaGitAlt } from "react-icons/fa";
-import { SiNextdotjs, SiRedux, SiExpress, SiFirebase, SiVercel, SiMongodb, SiPostman, SiFigma } from "react-icons/si";
+import { SiNextdotjs, SiRedux, SiExpress, SiFirebase, SiVercel, SiMongodb, SiPostman, SiFigma, SiMysql, SiJsonwebtokens } from "react-icons/si";
 import { DiJavascript, DiPython, DiJava } from "react-icons/di";
 import { useRef } from "react";
 
@@ -31,8 +31,8 @@ const techStacks = [
     skills: [
       { name: "Node.js", icon: <FaNodeJs /> },
       { name: "Express.js", icon: <SiExpress /> },
-      { name: "MySQL", icon: <SiMongodb /> },
-      { name: "JWT", icon: <DiJavascript /> },
+      { name: "MySQL", icon: <SiMysql/> },
+      { name: "JWT", icon: <SiJsonwebtokens/> },
       { name: "MongoDB", icon: <SiMongodb /> },
       { name: "Firebase", icon: <SiFirebase /> },
     ],

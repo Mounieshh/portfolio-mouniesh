@@ -59,16 +59,19 @@ const AboutPage = () => {
             About Me
           </motion.h2>
           <div className="flex flex-col md:flex-row lg:flex-row items-start gap-8 w-full">
-            <div className="w-full md:w-1/2 lg:mt-9">
-              <motion.p
-                className="text-lg text-black leading-relaxed mb-4 sm:mb-6 text-justify"
+            <div className="w-full md:w-1/2">
+              <motion.div
+                className="mb-8"
                 initial="hidden"
                 whileInView="visible"
                 variants={sectionVariants}
                 viewport={{ once: true, amount: 0.3 }}
               >
-                Hi 👋! I’m Mouniesh, a third-year Computer Science and Engineering student passionate about web development. With a strong foundation in web technologies, I specialize in creating user-friendly digital solutions and am excited to contribute to innovative, impactful projects.
-              </motion.p>
+                <h3 className="text-2xl font-bold mb-4">Professional Summary</h3>
+                <p className="text-lg text-black leading-relaxed mb-4 sm:mb-6 text-justify">
+                  Hi 👋! I'm Mouniesh, a third-year Computer Science and Engineering student passionate about web development. With a strong foundation in web technologies, I specialize in creating user-friendly digital solutions and am excited to contribute to innovative, impactful projects.
+                </p>
+              </motion.div>
 
               <motion.div
                 className="md:flex md:flex-col lg:flex lg:flex-col mb-4 sm:mb-7 text-xl font-semibold"
@@ -197,20 +200,54 @@ const AboutPage = () => {
               </motion.div>
             </div>
 
-            <div className="hidden md:w-1/2 md:flex md:justify-end">
+            <div className="w-full md:w-1/2">
               <motion.div
-                className="relative w-full max-w-[30vw] aspect-[2/3] h-auto overflow-hidden shadow-lg md:h-[70vh]"
+                className="mb-8"
                 initial="hidden"
                 whileInView="visible"
-                variants={imageVariants}
+                variants={sectionVariants}
                 viewport={{ once: true, amount: 0.3 }}
               >
-                <Image
-                  src="/project/port.jpg"
-                  alt="Mouniesh"
-                  fill
-                  style={{ objectFit: "cover" }}
-                />
+                <h3 className="text-2xl font-bold mb-6">Education</h3>
+                <div className="space-y-6">
+                  <div className="border-b border-gray-200 pb-4">
+                    <div className="flex justify-between items-start">
+                      <div>
+                        <h4 className="text-xl font-semibold mb-1">B.E. Computer Science and Engineering</h4>
+                        <p className="text-gray-600">KPR Institute of Engineering and Technology</p>
+                      </div>
+                      <div className="text-right">
+                        <p className="text-gray-600">2026</p>
+                        <p className="text-gray-600">CGPA: 8.5/10</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="border-b border-gray-200 pb-4">
+                    <div className="flex justify-between items-start">
+                      <div>
+                        <h4 className="text-xl font-semibold mb-1">Secondary School Education</h4>
+                        <p className="text-gray-600">Government Higher Secondary School</p>
+                      </div>
+                      <div className="text-right">
+                        <p className="text-gray-600">2022</p>
+                        <p className="text-gray-600">91.3%</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="border-b border-gray-200 pb-4">
+                    <div className="flex justify-between items-start">
+                      <div>
+                        <h4 className="text-xl font-semibold mb-1">Higher Secondary Education</h4>
+                        <p className="text-gray-600">Government Higher Secondary School</p>
+                      </div>
+                      <div className="text-right">
+                        <p className="text-gray-600">2020</p>
+                        <p className="text-gray-600">88.8%</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
               </motion.div>
             </div>
           </div>

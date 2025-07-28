@@ -43,18 +43,17 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full border-b-2 border-black bg-background fixed top-0 z-50">
+    <nav className="w-full border-b-2 border-black bg-inherit fixed top-0 z-50">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <div className="text-xl font-bold font-space-grotesk">
             <Link href="/" className="text-black hover:underline hover:underline-offset-4 transition-all duration-300">
               <Image
-              src="/logo.svg"
-              alt="Logo Image"
-              height={53}
-              width={53}
-
-              className="object-cover"
+                src="/logo.svg"
+                alt="Logo Image"
+                height={53}
+                width={53}
+                className="object-cover"
               />
             </Link>
           </div>
@@ -84,11 +83,10 @@ const Navbar = () => {
             >
               Experience
             </button>
-            
           </div>
 
           <div className="text-black hover:underline hover:underline-offset-4 transition-all duration-300 font-space-grotesk font-semibold">
-          <Link href="/contact" className="text-black hover:underline hover:underline-offset-4 transition-all duration-300">
+            <Link href="/contact" className="text-black hover:underline hover:underline-offset-4 transition-all duration-300">
               Contact
             </Link>
           </div>
@@ -195,7 +193,6 @@ const Navbar = () => {
                     Contact
                   </Link>
                 </motion.div>
-
               </motion.div>
             </motion.div>
           )}

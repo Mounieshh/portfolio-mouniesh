@@ -38,6 +38,7 @@ const AboutPage = () => {
     offset: ["start end", "end start"],
   });
 
+  console.log("Time variant authority")
   const scale = useTransform(scrollYProgress, [0, 0.5], [1, 1.05]);
   const opacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
 
